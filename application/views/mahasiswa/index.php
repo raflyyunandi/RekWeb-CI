@@ -1,7 +1,8 @@
 
 <div class="container">
+	<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash'); ?>"></div>
 	<?php if($this->session->flashdata('flash')): ?>
-	<div class="row mt-3">
+<!-- 	<div class="row mt-3">
 		<div class="col-md-6">  
 			<div class="alert alert-success alert-dismissible fade show" role="alert"> 
 				Data mahasiswa <strong>Berhasil</strong> <?=$this->session->flashdata('flash');?>
@@ -10,7 +11,7 @@
 				</div>
 		</div>
 	</div>
-
+ -->
 	<?php endif;?>
 
 	<div class="row mt-3">
@@ -44,7 +45,7 @@
 				<li class="list-group-item"><?=$mhs['nama']?>
 					<a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-pill badge-info float-right ml-1">Detail</a>
 					<a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-pill badge-success float-right ml-1">Ubah</a>
-					<a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-pill badge-danger float-right ml-1">Hapus</a>
+					<a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-pill badge-danger float-right ml-1 tombol-hapus" >Hapus</a>
 					<?php endforeach;?>
 				</li>
 			</ul>
