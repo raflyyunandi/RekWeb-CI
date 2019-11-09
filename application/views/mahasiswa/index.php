@@ -45,7 +45,7 @@
 				<li class="list-group-item"><?=$mhs['nama']?>
 					<a href="<?=base_url()?>mahasiswa/detail/<?= $mhs['id'];?>" class="badge badge-pill badge-info float-right ml-1">Detail</a>
 					<a href="<?=base_url()?>mahasiswa/ubah/<?= $mhs['id'];?>" class="badge badge-pill badge-success float-right ml-1">Ubah</a>
-					<a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" onclick="return confirm('Yakin Ingin Hapus?');" class="badge badge-pill badge-danger float-right ml-1 tombol-hapus" >Hapus</a>
+					<a href="<?=base_url()?>mahasiswa/hapus/<?= $mhs['id'];?>" class="badge badge-pill badge-danger float-right ml-1 tombol-hapus" >Hapus</a>
 					<?php endforeach;?>
 				</li>
 			</ul>

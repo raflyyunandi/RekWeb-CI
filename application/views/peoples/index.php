@@ -13,6 +13,13 @@
             </form>
         </div>
     </div>
+    
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <a href="<?= base_url();?>peoples/tambah" class="btn btn-outline-primary btn-lg">Tambah Data Peoples</a>
+        </div>
+    </div>
+    <br>
 
     <div class="row">
         <div class="col-md-10">
@@ -22,6 +29,7 @@
                     <tr>
                         <th>#</th>
                         <th>Name</th>
+                        <th>Address</th>
                         <th>Email</th>
                         <th>Action</th>
                     </tr>
@@ -40,11 +48,12 @@
                         <tr>
                             <th><?= ++$start; ?></th>
                             <td><?= $p['name']; ?></td>
+                            <td><?= $p['address']; ?></td>
                             <td><?= $p['email']; ?></td>
                             <td>
-                                <a href="" class="badge badge-primary">detail</a>
-                                <a href="" class="badge badge-success">edit</a>
-                                <a href="" class="badge badge-danger">delete</a>
+                                <a href="<?=base_url()?>peoples/detail/<?= $p['id'];?>" class="badge badge-primary">detail</a>
+                                <a href="<?=base_url()?>peoples/ubah/<?= $p['id'];?>" class="badge badge-success">edit</a>
+                                <a href="<?=base_url()?>peoples/hapus/<?= $p['id'];?>" class="badge badge-danger tombol-hapus">delete</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
